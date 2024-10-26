@@ -9,9 +9,6 @@
     --foreground: #ededed;
   }
 }
-.css-1qsnacy-MuiInputBase-root-MuiInput-root::before, .css-1qsnacy-MuiInputBase-root-MuiInput-root::after, .css-1qsnacy-MuiInputBase-root-MuiInput-root:focus, .css-1qsnacy-MuiInputBase-root-MuiInput-root:active {
-  border: none !important;
-}
 
 html,
 body {
@@ -19,12 +16,12 @@ body {
   overflow-x: hidden;
   font-family: "Urbanist";
 }
-.css-1dfcyzw-MuiPaper-root-MuiPopover-paper {
+/* .css-1dfcyzw-MuiPaper-root-MuiPopover-paper {
   box-shadow: none;
   width: 125%;
   border: 1px solid #E9ECEF;
   border-radius: 20px;
-}
+} */
 
 body {
   color: var(--foreground);

@@ -65,12 +65,19 @@ export default function InputArea() {
           </svg>
         </IconButton>
         <TextField
+          id="requestBox"
           variant="standard"
           placeholder="Ask me anything..."
           fullWidth
           sx={{
-            "& .MuiOutlinedInput-root": {
-              borderBottom: "none", // Remove bottom border
+            "& .MuiInput-underline:before": {
+              borderBottom: "none", // Hide bottom border before focus
+            },
+            "& .MuiInput-underline:after": {
+              borderBottom: "none", // Hide bottom border after focus
+            },
+            "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
+              borderBottom: "none", // Hide border on hover
             },
             mx: 0,
             border: "none", // Remove border
@@ -120,6 +127,13 @@ export default function InputArea() {
           width: "300px",
           boxShadow: "none",
         }}
+        PaperProps={{
+          style: {
+            boxShadow: "none",
+            border: "1px solid #E9ECEF",
+            borderRadius: "20px",
+          },
+        }}
       >
         <div
           style={{
@@ -128,6 +142,7 @@ export default function InputArea() {
             display: "flex",
             background: "#FCFCFC",
             alignItems: "center",
+            boxShadow: "none",
           }}
         >
           <List
