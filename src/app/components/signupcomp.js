@@ -1,12 +1,12 @@
 "use client"
 import { useState } from 'react';
-import Sidebar from './sidebar';
+import SidebarSignup from './sidebarsignup';
 import ChatArea from './chatarea';
 
 import { Box, IconButton, useMediaQuery, useTheme, Drawer } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-export default function Dashboard() {
+export default function SignupComp() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -36,11 +36,11 @@ export default function Dashboard() {
               '& .MuiDrawer-paper': { width: "100%" },
             }}
           >
-            <Sidebar />
+            <SidebarSignup />
           </Drawer>
         </>
       ) : (
-        <Sidebar />
+        <SidebarSignup />
       )}
       <Box
         sx={{

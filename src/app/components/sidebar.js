@@ -27,6 +27,7 @@ export default function Sidebar() {
         justifyContent: "space-between",
         height: "100%",
       }}
+       id="navbarId"
     >
       <Box>
         <Typography

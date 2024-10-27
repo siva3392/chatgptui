@@ -1,8 +1,11 @@
 // components/ChatArea.js
-import { Box, Typography, CircularProgress } from "@mui/material";
+import { Box, Typography, CircularProgress,IconButton  } from "@mui/material";
 import InputArea from './inputarea';
+import { useState } from "react";
 export default function ChatArea() {
+  const [visibleNav, setVisibleNav] = useState(true);
   return (
+    
     <Box
       sx={{
         m: 4,
@@ -24,7 +27,18 @@ export default function ChatArea() {
           p: { xs: 2, md: 2 },
         }}
       >
-        <svg
+      <IconButton onClick={()=>{
+         const div = document.getElementById("navbarId");
+         
+         if (!visibleNav) {
+                div.style.display = "flex"; 
+                setVisibleNav(true);
+            } else {
+                div.style.display = "none"; 
+                setVisibleNav(false);
+            }
+      }}>
+      <svg
           xmlns="http://www.w3.org/2000/svg"
           width={24}
           height={24}
@@ -43,6 +57,8 @@ export default function ChatArea() {
             d="M18 10.75c-.41 0-.75-.34-.75-.75V6.75H14c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4c.41 0 .75.34.75.75v4c0 .41-.34.75-.75.75ZM10 18.75H6c-.41 0-.75-.34-.75-.75v-4c0-.41.34-.75.75-.75s.75.34.75.75v3.25H10c.41 0 .75.34.75.75s-.34.75-.75.75Z"
           />
         </svg>
+      </IconButton>
+        
         <Typography variant="h6" sx={{ color: "#212529", fontWeight: 600 }}>
           Welcome back, John Doe
         </Typography>
